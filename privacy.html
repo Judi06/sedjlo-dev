@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité | Kenelm - Développeur Full-Stack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c7be5;
+            --secondary-color: #00d97e;
+            --dark-color: #12263f;
+            --light-color: #f8f9fa;
+            --text-color: #495057;
+            --text-light: #6e84a3;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--white);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--dark-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        /* Politique de confidentialité */
+        .privacy-container {
+            max-width: 1000px;
+            margin: 120px auto 80px;
+            padding: 0 5%;
+        }
+
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .privacy-header h1 {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+
+        .privacy-header p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .privacy-section {
+            margin-bottom: 40px;
+        }
+
+        .privacy-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-color);
+        }
+
+        .privacy-section h3 {
+            font-size: 1.3rem;
+            color: var(--dark-color);
+            margin: 25px 0 15px;
+        }
+
+        .privacy-section p, .privacy-section ul {
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .privacy-section ul {
+            padding-left: 20px;
+        }
+
+        .privacy-section li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            background-color: rgba(44, 123, 229, 0.1);
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 50px 5% 30px;
+            margin-top: 50px;
+        }
+
+        .footer-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+
+        .footer-col p {
+            color: #adb5bd;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #adb5bd;
+            font-size: 0.9rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .privacy-link {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .privacy-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--secondary-color);
+            transition: width 0.3s;
+        }
+
+        .privacy-link:hover {
+            color: var(--secondary-color);
+        }
+
+        .privacy-link:hover::after {
+            width: 100%;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .privacy-header h1 {
+                font-size: 2rem;
+            }
+            
+            .privacy-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .privacy-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .privacy-container {
+                margin-top: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">Judi Sedjlo<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Retour au Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <!-- Politique de confidentialité -->
+    <div class="privacy-container">
+        <div class="privacy-header">
+            <h1>Politique de Confidentialité</h1>
+            <p>Dernière mise à jour : 1er mai 2025</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>1. Collecte des données</h2>
+            <p>Dans le cadre de mon activité de développeur freelance, je peux être amené à collecter et traiter des données personnelles pour les finalités suivantes :</p>
+            <ul>
+                <li>Réponse aux demandes de contact via le formulaire du portfolio</li>
+                <li>Exécution des prestations de services contractuelles</li>
+                <li>Amélioration de l'expérience utilisateur sur mon portfolio</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>2. Protection des données utilisateur</h2>
+            <p>Je m'engage à protéger vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD) et à la législation applicable.</p>
+            
+            <h3>Types de données collectées :</h3>
+            <ul>
+                <li>Identité (nom, prénom)</li>
+                <li>Coordonnées (email, téléphone)</li>
+                <li>Données de navigation (cookies non intrusifs)</li>
+                <li>Contenu des échanges professionnels</li>
+            </ul>
+            
+            <h3>Base légale du traitement :</h3>
+            <p>Le traitement de vos données est fondé sur :</p>
+            <ul>
+                <li>Votre consentement explicite pour les demandes de contact</li>
+                <li>L'exécution contractuelle pour les prestations de services</li>
+                <li>Mon intérêt légitime pour la sécurité et l'amélioration de mon portfolio</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>3. Sécurité des données</h2>
+            <p>Je mets en œuvre des mesures techniques et organisationnelles appropriées pour garantir un niveau de sécurité adapté au risque :</p>
+            <ul>
+                <li>Formulaire de contact sécurisé via <span class="highlight">Formspree</span> avec chiffrement SSL</li>
+                <li>Stockage des données clients sur des serveurs sécurisés</li>
+                <li>Accès restreint aux données personnelles</li>
+                <li>Sauvegardes régulières et chiffrées</li>
+                <li>Protection contre les accès non autorisés, la perte ou la destruction</li>
+            </ul>
+            
+            <p>En cas de violation de données susceptible d'engendrer un risque pour vos droits et libertés, je m'engage à vous en informer dans les meilleurs délais.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>4. Conservation des données</h2>
+            <p>Les données personnelles sont conservées :</p>
+            <ul>
+                <li><strong>Demandes de contact :</strong> 1 an après le dernier échange</li>
+                <li><strong>Données clients :</strong> Durée contractuelle + 5 ans pour obligations légales</li>
+                <li><strong>Cookies :</strong> 13 mois maximum</li>
+            </ul>
+            <p>Passés ces délais, les données sont soit supprimées, soit anonymisées pour des analyses statistiques.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>5. Droits des utilisateurs</h2>
+            <p>Conformément à la réglementation, vous disposez des droits suivants :</p>
+            <ul>
+                <li><strong>Droit d'accès :</strong> Demander communication des données vous concernant</li>
+                <li><strong>Droit de rectification :</strong> Faire corriger des données inexactes</li>
+                <li><strong>Droit à l'effacement :</strong> Demander la suppression de vos données</li>
+                <li><strong>Droit à la limitation :</strong> Demander le verrouillage du traitement</li>
+                <li><strong>Droit d'opposition :</strong> S'opposer au traitement pour motifs légitimes</li>
+                <li><strong>Droit à la portabilité :</strong> Recevoir vos données dans un format structuré</li>
+            </ul>
+            <p>Pour exercer ces droits ou pour toute question relative à la protection des données, vous pouvez me contacter à l'adresse : <span class="highlight">kedagnijudicael@gmail.com</span></p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>6. Cookies et traceurs</h2>
+            <p>Mon portfolio utilise des cookies strictement nécessaires à son fonctionnement :</p>
+            <ul>
+                <li>Cookies de session pour la navigation</li>
+                <li>Cookies de préférences (langue, affichage)</li>
+            </ul>
+            <p>Aucun cookie tiers ou outil d'analyse n'est implémenté sans votre consentement préalable.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>7. Propriété intellectuelle</h2>
+            <p>Tous les éléments de mon portfolio (textes, images, code, design) ne sont pas protégés par le droit d'auteur et ne sont pas ma propriété exclusive ou celle de mes clients, sauf mention contraire.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>8. Modifications de la politique</h2>
+            <p>Je me réserve le droit de modifier cette politique de confidentialité pour me conformer aux évolutions légales ou à mes pratiques. La version en vigueur est toujours celle accessible sur mon portfolio.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Kenelm</h3>
+                <p>Développeur Full-Stack passionné par la création de solutions web modernes et l'intégration d'intelligence artificielle.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Kenelm. Tous droits réservés. | <a href="privacy.html" class="privacy-link">Politique de confidentialité</a></p>
+        </div>
+    </footer>
+</body>
+</html>
